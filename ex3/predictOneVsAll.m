@@ -31,6 +31,7 @@ X = [ones(m, 1) X];
 %
 A = sigmoid(X*all_theta');
 
+% only interested in p - the classification, not the value
 [v p] = max(A, [], 2);
 
 % =========================================================================
