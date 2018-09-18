@@ -86,8 +86,13 @@ J = J + (lambda / (2*m)) * (d1+d2);
 % Backpropagation
 d3 = a3 - y_matrix;
 d2 = (d3 * Theta2(:, 2:end)) .* sigmoidGradient(z2);
-% delta_2 = d3 * a2;
-% delta_1 = d2 * a1;
+delta_2 = d3' * a2;
+delta_1 = d2' * a1;
+
+
+% Non-regularized gradients
+Theta1_grad = delta_1 / m;
+Theta2_grad = delta_2 / m;
 
 % =========================================================================
 
