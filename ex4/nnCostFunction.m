@@ -76,6 +76,13 @@ a3 = sigmoid(z3);
 % Unregularized cost function
 J = sum(sum((-y_matrix).*log(a3) - (1-y_matrix).*log(1-a3))) / m;
 
+% Make sure first columns of matrix are eliminated
+d1 = sum(sum(Theta1(:, 2:end) .^2));
+d2 = sum(sum(Theta2(:, 2:end).^2));
+
+% Regularized cost function
+J = J + (lambda / (2*m)) * (d1+d2);
+
 % -------------------------------------------------------------
 
 % =========================================================================
