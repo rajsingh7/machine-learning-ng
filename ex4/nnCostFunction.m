@@ -74,7 +74,7 @@ z3 = a2 * Theta2';
 a3 = sigmoid(z3);
 
 % Unregularized cost function
-J = sum(sum((-y_matrix)'*log(a3) - (1-y_matrix)'*log(1-a3))) / m;
+J = sum(sum((-y_matrix).*log(a3) - (1-y_matrix).*log(1-a3))) / m;
 
 % -------------------------------------------------------------
 
