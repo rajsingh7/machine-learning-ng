@@ -26,6 +26,9 @@ theta_reg = [0; theta(2:end, :); ];
 
 J = sum((h-y).^2) / (2*m) + (lambda/(2*m)) * theta_reg' * theta_reg;
 
+% Gradients
+grad = (1/m) * ((X'*(h-y)) + lambda*theta_reg);
+
 % =========================================================================
 
 grad = grad(:);
