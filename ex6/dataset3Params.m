@@ -23,11 +23,11 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
-Cs= [0.01; 0.03; 0.1; 0.3; 1; 3; 10; 30];
-sigmas =[0.01; 0.03; 0.1; 0.3; 1; 3; 10; 30];
+Cs = [0.01; 0.03; 0.1; 0.3; 1; 3; 10; 30];
+sigmas = [0.01; 0.03; 0.1; 0.3; 1; 3; 10; 30];
 
 for i = 1:length(Cs)
-  C=Cs(i);
+  C = Cs(i);
 
   for j = 1:length(sigmas)
     sigma = sigmas(j);
