@@ -28,8 +28,8 @@ for i = 1:size(X,1)
     distortion(j) = sum((X(i, :) - centroids(j, :)) .^ 2);
   end
 
-[min_idst, min_idx] = min(distortion);
-idx(i) = min_idx;
+  [min_idst, min_idx] = min(distortion);
+  idx(i) = min_idx;
 
 end
 
